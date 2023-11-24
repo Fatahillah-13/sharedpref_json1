@@ -36,7 +36,7 @@ public class MainActivityDisplay extends AppCompatActivity {
             Log.i("Info pref", ""+listproduct.toString());
         }
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        ProductAdapter adapter = new ProductAdapter(listproduct);
+        ProductAdapter adapter = new ProductAdapter(getApplicationContext(),listproduct);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
         recyclerView.setAdapter(adapter);
